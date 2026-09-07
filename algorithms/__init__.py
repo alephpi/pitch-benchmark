@@ -5,7 +5,7 @@ from .base import PitchAlgorithm
 
 # Algorithm metadata - maps names to (module_name, class_name, required_packages)
 _ALGORITHM_METADATA = {
-    "CREPE": ("crepe", "CREPEPitchAlgorithm", ["crepe", "tensorflow"]),
+    # "CREPE": ("crepe", "CREPEPitchAlgorithm", ["crepe", "tensorflow"]),
     "PENN": ("penn", "PENNPitchAlgorithm", ["penn"]),
     "Praat": ("praat", "PraatPitchAlgorithm", ["praat-parselmouth"]),
     "RAPT": ("rapt", "RAPTPitchAlgorithm", ["pysptk"]),
@@ -17,17 +17,22 @@ _ALGORITHM_METADATA = {
     ),
     "YAAPT": ("yaapt", "YAAPTPitchAlgorithm", ["AMFM-decompy"]),
     "pYIN": ("pyin", "pYINPitchAlgorithm", ["librosa"]),
-    "BasicPitch": ("basicpitch", "BasicPitchPitchAlgorithm", ["basic-pitch"]),
+    # "BasicPitch": ("basicpitch", "BasicPitchPitchAlgorithm", ["basic-pitch"]),
     "SwiftF0": ("swiftf0", "SwiftF0PitchAlgorithm", ["swift-f0"]),
-    "SPICE": (
-        "spice",
-        "SPICEPitchAlgorithm",
-        ["tensorflow", "tensorflow-hub"],
-    ),
+    # "SPICE": (
+    #     "spice",
+    #     "SPICEPitchAlgorithm",
+    #     ["tensorflow", "tensorflow-hub"],
+    # ),
     "RMVPE": (
         "rmvpe",
         "RMVPEPitchAlgorithm",
         ["torch"],
+    ),
+    "FCPE": (
+        "fcpe",
+        "FCPEPitchAlgorithm",
+        ["torchfcpe"],
     ),
     "DIO": ("dio", "DIOPitchAlgorithm", ["pyworld"]),
     "Harvest": ("harvest", "HarvestPitchAlgorithm", ["pyworld"]),

@@ -83,7 +83,7 @@ def run_benchmark(
     algorithm_classes: List[Type],
     baseline_algorithm: Type,
     output_dir: str = "results",
-    sample_rate: int = 22050,
+    sample_rate: int = 16000,
     hop_length: int = 256,
     signal_length_sec: float = 5.0,
     n_runs: int = 20,
@@ -94,7 +94,8 @@ def run_benchmark(
     print(f"Generating test signal ({signal_length_sec}s at {sample_rate}Hz)...")
     audio_signal = generate_harmonic_signal(sample_rate, signal_length_sec)
 
-    devices = ["cpu"]
+    # devices = ["cpu"]
+    devices = [] # we don't test CPU, too slow on my device
     if torch.cuda.is_available():
         devices.append("cuda")
         print(f"CUDA available: {torch.cuda.get_device_name()}")
@@ -228,7 +229,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--baseline",
         type=str,
-        default="CREPE",
+        default="TorchCREPE",
         choices=AVAILABLE_ALGORITHMS,
         help="Baseline algorithm for relative speed comparison",
     )
