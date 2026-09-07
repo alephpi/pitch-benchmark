@@ -1,5 +1,5 @@
 >[!warning]
-A fork of pitch detection benchmark, but without tensorflow dependency, i.e. without crepe/spice/basic_pitch as I cannot get their dependencies resolved in `uv`.
+A fork of pitch detection benchmark, but without spice or basic_pitch as I cannot get their dependencies resolved in `uv`, and anyway they are not so good in the benchmark.
 
 Env config
 ```
@@ -7,6 +7,43 @@ uv init -p 3.12
 uv sync
 uv pip install crepe # cannot use direct add in uv.
 ```
+
+Weirdly, our GPU speed benchmark shows that CREPE is not so slow than RMVPE (reported in FCPE paper).
+
+```
+Baseline: CREPE
++-------------+-----------------+
+| Algorithm   | CUDA            |
++=============+=================+
+| CREPE       | 1.00x (246.4ms) |
++-------------+-----------------+
+| PENN        | 5.30x (105.5ms) |
++-------------+-----------------+
+| Praat       | CPU only        |
++-------------+-----------------+
+| RAPT        | CPU only        |
++-------------+-----------------+
+| SWIPE       | CPU only        |
++-------------+-----------------+
+| TorchCREPE  | 7.85x (71.2ms)  |
++-------------+-----------------+
+| YAAPT       | CPU only        |
++-------------+-----------------+
+| pYIN        | CPU only        |
++-------------+-----------------+
+| SwiftF0     | CPU only        |
++-------------+-----------------+
+| RMVPE       | 1.99x (281.3ms) |
++-------------+-----------------+
+| FCPE        | 3.67x (152.2ms) |
++-------------+-----------------+
+| DIO         | CPU only        |
++-------------+-----------------+
+| Harvest     | CPU only        |
++-------------+-----------------+
+```
+
+
 
 # Pitch Detection Benchmark
 
