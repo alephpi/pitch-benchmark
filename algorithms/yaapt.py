@@ -1,7 +1,7 @@
 from typing import Tuple
 
+import amfm_decompy as pYAAPT
 import amfm_decompy.basic_tools as basic
-import amfm_decompy.pYAAPT as pYAAPT
 import numpy as np
 
 from .base import ThresholdPitchAlgorithm

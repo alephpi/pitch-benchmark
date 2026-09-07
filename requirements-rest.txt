@@ -106,11 +106,8 @@ tensorflow-io-gcs-filesystem==0.37.1
 termcolor==3.1.0
 tflite-runtime==2.14.0
 threadpoolctl==3.6.0
-torch==2.7.1+cu126
-torchaudio==2.7.1+cu126
 torchcrepe==0.0.24
 torchutil==0.1.1
-torchvision==0.22.1+cu126
 tqdm==4.67.1
 triton==3.3.1
 typing-extensions==4.14.1

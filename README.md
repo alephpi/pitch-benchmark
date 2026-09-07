@@ -1,3 +1,6 @@
+>[!warning]
+A fork of pitch detection benchmark, but without tensorflow dependency, i.e. without crepe/spice/basic_pitch as I cannot get their dependencies resolved in `uv`.
+
 # Pitch Detection Benchmark
 
 A comprehensive benchmark suite evaluating pitch detection algorithms across 8 datasets covering speech, music, synthetic, and real-world audio conditions.
@@ -49,11 +52,11 @@ Download the required datasets:
 
 - [PTDB-TUG](https://www.spsc.tugraz.at/databases-and-tools/ptdb-tug-pitch-tracking-database-from-graz-university-of-technology.html) - Speech with laryngograph ground truth
 - [NSynth](https://magenta.tensorflow.org/datasets/nsynth) - Synthetic musical instruments
-- [MDB-stem-synth](https://zenodo.org/records/1481172) - Synthetic music stems
+- [MDB-stem-synth](https://zenodo.org/records/1481172/files/MDB-stem-synth.tar.gz) - Synthetic music stems
 - [MIR-1K](https://zenodo.org/records/3532216) - Vocal excerpts
-- [Vocadito](https://zenodo.org/records/5578807) - Solo vocal recordings
+- [Vocadito](https://zenodo.org/records/5578807/files/vocadito.zip) - Solo vocal recordings
 - [Bach10-mf0-synth](https://zenodo.org/records/1481156/files/Bach10-mf0-syth.tar.gz) - Synthetic Bach compositions
-- [CHiME-Home](https://archive.org/details/chime-home) - Background noise for testing
+- [CHiME-Home](https://archive.org/download/chime-home/chime_home.tar.gz) - Background noise for testing
 
 Organize datasets in a directory structure like:
 ```
