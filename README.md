@@ -1,6 +1,13 @@
 >[!warning]
 A fork of pitch detection benchmark, but without tensorflow dependency, i.e. without crepe/spice/basic_pitch as I cannot get their dependencies resolved in `uv`.
 
+Env config
+```
+uv init -p 3.12
+uv sync
+uv pip install crepe # cannot use direct add in uv.
+```
+
 # Pitch Detection Benchmark
 
 A comprehensive benchmark suite evaluating pitch detection algorithms across 8 datasets covering speech, music, synthetic, and real-world audio conditions.

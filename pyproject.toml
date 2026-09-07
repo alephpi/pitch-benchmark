@@ -15,6 +15,7 @@ dependencies = [
     "pyworld>=0.3.5",
     "swift-f0>=0.1.2",
     "tabulate>=0.10.0",
+    "tensorflow>=2.21.0",
     "torbi>=1.4.0",
     "torch==2.10.0",
     "torchaudio==2.10.0",
