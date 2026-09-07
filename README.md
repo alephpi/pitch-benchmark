@@ -8,16 +8,14 @@ uv sync
 uv pip install crepe # cannot use direct add in uv.
 ```
 
-Weirdly, our GPU speed benchmark shows that CREPE is not so slow than RMVPE (reported in FCPE paper).
-
 ```
 Baseline: CREPE
 +-------------+-----------------+
 | Algorithm   | CUDA            |
 +=============+=================+
-| CREPE       | 1.00x (246.4ms) |
+| CREPE       | 1.00x (231.3ms) |
 +-------------+-----------------+
-| PENN        | 5.30x (105.5ms) |
+| PENN        | 10.33x (99.2ms) |
 +-------------+-----------------+
 | Praat       | CPU only        |
 +-------------+-----------------+
@@ -25,7 +23,7 @@ Baseline: CREPE
 +-------------+-----------------+
 | SWIPE       | CPU only        |
 +-------------+-----------------+
-| TorchCREPE  | 7.85x (71.2ms)  |
+| TorchCREPE  | 15.87x (64.5ms) |
 +-------------+-----------------+
 | YAAPT       | CPU only        |
 +-------------+-----------------+
@@ -33,9 +31,9 @@ Baseline: CREPE
 +-------------+-----------------+
 | SwiftF0     | CPU only        |
 +-------------+-----------------+
-| RMVPE       | 1.99x (281.3ms) |
+| RMVPE       | 3.96x (259.0ms) |
 +-------------+-----------------+
-| FCPE        | 3.67x (152.2ms) |
+| FCPE        | 73.51x (13.9ms) |
 +-------------+-----------------+
 | DIO         | CPU only        |
 +-------------+-----------------+

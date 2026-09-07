@@ -26,11 +26,8 @@ class FCPEPitchAlgorithm(ContinuousPitchAlgorithm):
         f0_target_length = (audio_length // self.hop_size) + 1
         wav = torch.from_numpy(audio).float().unsqueeze(0).unsqueeze(-1).to(self.device)
 
-        # Load the model
-        model = spawn_bundled_infer_model(device=self.device)
-
         # Perform pitch inference
-        f0, uv = model.infer(
+        f0, uv = self.model.infer(
             wav,
             sr=self.sample_rate,
             decoder_mode='local_argmax',  # Recommended mode
