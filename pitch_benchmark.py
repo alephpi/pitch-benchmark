@@ -386,7 +386,8 @@ if __name__ == "__main__":
     random.seed(args.seed)
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
-    thresholds = np.linspace(0.0, 1.0, 11)
+    thresholds = None   # Use default thresholds for each algorithm, disable thresholds search, which is kind of hypertuning on the test set.
+    # thresholds = np.linspace(0.0, 1.0, 11)
 
     print(
         f"--- Starting benchmark for dataset '{args.dataset}' with seed {args.seed} ---"
